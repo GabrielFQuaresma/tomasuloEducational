@@ -122,6 +122,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ onLoadProgram }) => {
               <option value="branches">Desvios Condicionais</option>
               <option value="speculation">Especulação Avançada</option>
               <option value="demonstraRenomeacaoEPredicao">Renomeação e Predição (Demo)</option>
+              <option value="renomeacaoAlwaysTaken">Renomeação Always Taken (Demo)</option>
             </select>
             
             <button

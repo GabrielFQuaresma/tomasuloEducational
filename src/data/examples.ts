@@ -60,6 +60,14 @@ export const examplePrograms: Record<string, Instruction[]> = {
     { id: 4, operation: 'ADD', dest: 'R7', src1: 'R6', src2: 'R3' },      // Será flushada
     { id: 5, operation: 'ADD', dest: 'R0', src1: 'R0', src2: 'R0' },      // Alvo do branch (NOP)
   ],
+  renomeacaoAlwaysTaken: [
+    { id: 0, operation: 'BEQ', src1: 'R0', src2: 'R1', target: 3 },
+    { id: 1, operation: 'SUB', dest: 'R6', src1: 'R1', src2: 'R2' },
+    { id: 2, operation: 'ADD', dest: 'R7', src1: 'R6', src2: 'R3' },
+    { id: 3, operation: 'ADD', dest: 'R0', src1: 'R0', src2: 'R0' },
+    { id: 4, operation: 'ADD', dest: 'R1', src1: 'R2', src2: 'R3' },
+    { id: 5, operation: 'ADD', dest: 'R1', src1: 'R1', src2: 'R4' },
+  ],
 };
 
 export const instructionDescriptions: Record<string, string> = {

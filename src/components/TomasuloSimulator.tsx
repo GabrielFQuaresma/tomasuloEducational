@@ -11,6 +11,7 @@ import { ReorderBuffer } from './ReorderBuffer';
 import { BranchPredictor } from './BranchPredictor';
 import { CodeEditor } from './CodeEditor';
 import PerformanceMetrics from './PerformanceMetrics';
+import StickyControlsBar from './StickyControlsBar';
 
 export const TomasuloSimulator: React.FC = () => {
   const [engine, setEngine] = useState<TomasuloEngine>(new TomasuloEngine(examplePrograms.demonstraRenomeacaoEPredicao));
@@ -148,6 +149,18 @@ export const TomasuloSimulator: React.FC = () => {
           )}
         </div>
 
+        <div className="sticky top-0 z-30 bg-gray-50 pb-2">
+          <StickyControlsBar
+            isRunning={isRunning}
+            canStep={canStep}
+            canGoBack={canGoBack}
+            onPlay={handlePlay}
+            onPause={handlePause}
+            onStep={handleStep}
+            onBack={handleBack}
+            onReset={handleReset}
+          />
+        </div>
         <Controls
           isRunning={isRunning}
           canStep={canStep}
